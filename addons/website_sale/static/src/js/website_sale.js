@@ -306,7 +306,7 @@ publicWidget.registry.WebsiteSale = publicWidget.Widget.extend(VariantMixin, {
             },
         }).then(function (data) {
             $input.data('update_change', false);
-            var check_value = parseInt($input.val() || 0, 10);
+            var check_value = parseFloat($input.val() || 0, 10);
             if (isNaN(check_value)) {
                 check_value = 1;
             }
@@ -571,7 +571,7 @@ publicWidget.registry.WebsiteSale = publicWidget.Widget.extend(VariantMixin, {
         if ($input.data('update_change')) {
             return;
         }
-        var value = parseInt($input.val() || 0, 10);
+        var value = parseFloat($input.val() || 0, 10);
         if (isNaN(value)) {
             value = 1;
         }
